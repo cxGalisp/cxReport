@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary Section</title>
+    <link rel="stylesheet" type="text/css" href="summary-section.css">
+
+</head>
+<body>
+<table class="summary-section">
+    <img class="cx-icon" id="cx-icon-main"/>
+    <div class="cx-title">Checkmarx</div>
+
+    <!--summary row-->
+    <div class="summary-row">
+        <!--sast-->
+        <div class="summary-table-row cxsast">
+            <div class="graph">
+                <div class="graph-top">
+                    <div class="graph-title">Vulnerabilities Status</div>
+                    <div id="threshold-exceeded-compliance"></div>
+                </div>
+                <ul class="chart">
+
+                    <!--high-->
+                    <li>
+                        <div class="bar-count" id="bar-count-high">
+
+                        </div>
+                        <span class="bar-1" id="bar-high"><div id="tooltip-high">
+
+                        </div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">High</div>
+                        </div>
+                    </li>
+
+                    <!--medium-->
+                    <li>
+                        <div class="bar-count" id="bar-count-med">
+
+                        </div>
+                        <span class="bar-2" id="bar-med"><div id="tooltip-med">
+
+                        </div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">Medium</div>
+                        </div>
+                    </li>
+
+                    <!--low-->
+                    <li>
+                        <div class="bar-count" id="bar-count-low">
+
+                        </div>
+                        <span class="bar-3" id="bar-low"><div id="tooltip-low">
+
+                        </div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">Low</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--osa-->
+        <div class="summary-table-row cxosa" id="osa-info">
+            <div class="libraries">
+                <div class="libraries-vulnerable">
+                    <div class="libraries-vulnerable-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="31px" version="1.1" viewBox="0 0 47 31" width="47px">
+                            <title>lib
+                                Vulnerabilities Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <path id="path-4"
+                                      d="M25,31 L4,31 C1.94360167,31 0,29.0245324 0,27 L0,8 L0,3 C0,1.48550257 1.46424259,0 3,0 L9,0 C9.88514832,0 11.1635669,0.937415809 12,2 L12,4 L34,4 C36.0604107,4.42857143 38,6.41548071 38,9 L38,11"/>
+                                <mask height="31" maskUnits="objectBoundingBox" id="mask-4" width="38" maskContentUnits="userSpaceOnUse" fill="white" x="0" y="0">
+                                    <use xlink:href="#path-4"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-518.000000, -646.000000)" id="Jenkins">
+                                    <g transform="translate(270.000000, 646.000000)" id="OSA">
+                                        <g transform="translate(248.000000, 0.000000)" id="Lib-Vulnerabilities">
+                                            <g id="lib-Vulnerabilities-Icon">
+                                                <use mask="url(#mask-4)" stroke-width="4" id="Combined-Shape" stroke="#362F53" xlink:href="#path-4"/>
+                                                <g transform="translate(26.600000, 14.233021)" id="Alert">
+                                                    <path id="Page-1"
+                                                          d="M9.71486676,1.21470909 C10.3018963,0.274949219 11.2197722,0.29932009 11.7612462,1.26246584 L19.4943093,15.0176364 C20.037464,15.9837716 19.5847058,16.7669789 18.4769973,16.7669789 L2.0007805,16.7669789 C0.895779941,16.7669789 0.477014275,16.0033396 1.06291102,15.0653932 L9.71486676,1.21470909 Z"
+                                                          fill="#DA2945"/>
+                                                    <rect height="5" id="Rectangle-5" width="2" fill="#FFFFFF" x="9.4" y="5.76697892"/>
+                                                    <rect height="2" id="Rectangle-6" width="2" fill="#FFFFFF" x="9.4" y="11.7669789"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="libraries-vulnerable-number" id="vulnerable-libraries"></div>
+                    <div class="libraries-vulnerable-text">
+                        Vulnerable and outdated libraries
+                    </div>
+                </div>
+                <div class="libraries-ok">
+                    <div class="libraries-ok-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="31px" version="1.1" viewBox="0 0 47 31" width="47px">
+                            <title>
+                                Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <path id="path-5"
+                                      d="M28,31 L4,31 C1.99474908,31 0,29.0245324 0,27 L0,8 L0,3 C0,1.48550257 1.50277529,0 3,0 L9,0 C10.1452838,0 11.457345,0.937415809 12,2 L13,4 L35,4 C37.0093689,4.42857143 39,6.41548071 39,9 L39,11"/>
+                                <mask height="31" maskUnits="objectBoundingBox" id="mask-5" width="39" maskContentUnits="userSpaceOnUse" fill="white" x="0" y="0">
+                                    <use xlink:href="#path-5"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-848.000000, -651.000000)" id="Jenkins">
+                                    <g transform="translate(270.000000, 646.000000)" id="OSA">
+                                        <g transform="translate(578.000000, 5.000000)" id="Lib-OK">
+                                            <g id="Icon">
+                                                <use mask="url(#mask-5)" stroke-width="4" id="Combined-Shape-Copy" stroke="#362F53" xlink:href="#path-5"/>
+                                                <path id="Combined-Shape"
+                                                      d="M46.4529784,18.9030304 C46.8068562,19.8686359 47,20.9117624 47,22 C47,26.9705627 42.9705627,31 38,31 C33.0294373,31 29,26.9705627 29,22 C29,17.0294373 33.0294373,13 38,13 C40.393622,13 42.5689975,13.934425 44.1812437,15.4583924 L37.6904269,21.8965709 L35.079173,19.3040452 L32.1948583,22.1475069 L37.6899611,27.6031981 L46.4529784,18.9030304 Z"
+                                                      fill="#8EBE15"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="libraries-vulnerable-number" id="ok-libraries">
+
+                    </div>
+                    <div class="libraries-ok-text">
+                        Libraries with no vulnerabilities
+                    </div>
+                </div>
+            </div>
+            <div class="graph">
+                <div class="graph-top">
+                    <div class="graph-title">Vulnerabilities Status</div>
+                    <div id="osa-threshold-exceeded-compliance">
+
+                    </div>
+                </div>
+                <ul class="osa-chart chart">
+                    <li>
+                        <div class="bar-count" id="osa-bar-count-high">
+
+                        </div>
+                        <span class="bar-1" id="osa-bar-high"><div id="osa-tooltip-high"></div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">High</div>
+                        </div>
+                    </li>
+
+                    <!--osa medium-->
+                    <li>
+                        <div class="bar-count" id="osa-bar-count-med">
+
+                        </div>
+                        <span class="bar-2" id="osa-bar-med"><div id="osa-tooltip-med">
+
+                        </div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">Medium</div>
+                        </div>
+                    </li>
+
+                    <!--osa low-->
+                    <li>
+                        <div class="bar-count" id="osa-bar-count-low">
+
+                        </div>
+                        <span class="bar-3" id="osa-bar-low"><div id="osa-tooltip-low">
+
+                        </div></span>
+                        <div class="bar-title-container">
+                            <div class="bar-title">Low</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</table>
+
+<table class="sast-full">
+    <tr id="sast-full" class="summary-table-row cxsast-full">
+        <td class="title-column">
+            <div class="summary-title">
+                <div class="sum1">CxSAST</div>
+                <div class="sum1">Full Report</div>
+            </div>
+            <div class="detailed-report">
+                <div class="sast-downloads">
+                    <div class="report-link"><a class="html-report" id="sast-html-link">
+                        <div class="html-report download-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="16px" version="1.1" viewBox="0 0 13 16"
+                                 width="13px"><title>
+                                Analize</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs/>
+                                <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                    <g transform="translate(-286.000000, -1439.000000)" id="Jenkins">
+                                        <g transform="translate(272.000000, 1290.000000)" id="CxSAST">
+                                            <g transform="translate(14.000000, 148.000000)" id="Group">
+                                                <g transform="translate(1.000000, 2.000000)" id="Analize">
+                                                    <circle cy="5" stroke-width="2" id="Oval-3" r="5" stroke="#373050" cx="5"/>
+                                                    <rect transform="translate(8.866025, 11.696152) rotate(-30.000000) translate(-8.866025, -11.696152) "
+                                                          height="6.53589838"
+                                                          id="Rectangle-9" width="2" fill="#373050" x="7.8660254" y="8.42820323"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="html-report download-txt">
+                            <div class="detailed-report-ttl">Analyzed results</div>
+                        </div>
+                    </a></div>
+                    <!--pdf-->
+                    <div class="report-link"><a class="pdf-report" id="sast-pdf-link">
+                        <div style="display: none;">h</div>
+                    </a></div>
+                    <div class="report-link"><a class="pdf-report" id="sast-code-viewer-link">
+                        <div class="pdf-report download-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" height="13"
+                                 id="SvgjsSvg1041"
+                                 version="1.1" viewBox="0 0 15 13" width="15"><title>Icon</title>
+                                <desc>Created with Avocode.</desc>
+                                <defs id="SvgjsDefs1042"/>
+                                <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-285.5,-841.5)" stroke-width="1" id="SvgjsPath1043" fill-opacity="0"
+                                      stroke-dasharray="0"
+                                      d="M296 843L299.53 847.78L296 852.56 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-285.5,-841.5)" stroke-width="1" id="SvgjsPath1044" fill-opacity="0"
+                                      stroke-dasharray="0"
+                                      d="M289.53 843L286 847.78L289.53 852.56 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-285.5,-841.5)" stroke-width="1" id="SvgjsPath1045" fill-opacity="0"
+                                      stroke-dasharray="0"
+                                      d="M293.61 842L291 853.79 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="pdf-report download-txt">
+                            <div class="pdf-report detailed-report-ttl">Open Code Viewer</div>
+                        </div>
+                    </a></div>
+                </div>
+            </div>
+        </td>
+        <td class="main-column">
+            <div class="full-start-end">
+
+                <!--start-->
+                <div class="full-start">
+                    <div class="full-start-end-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" version="1.1" viewBox="0 0 23 26" width="23px">
+                            <title>
+                                Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <rect height="23" rx="1.6" id="full-start-path" width="23" x="0" y="2"/>
+                                <mask height="23" maskUnits="objectBoundingBox" id="full-start-mask" width="23" maskContentUnits="userSpaceOnUse" fill="white" x="0"
+                                      y="0">
+                                    <use xlink:href="#full-start-path"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-684.000000, -708.000000)" id="Jenkins" stroke="#373050">
+                                    <g transform="translate(273.000000, 695.000000)" id="CxSAST">
+                                        <g transform="translate(411.000000, 9.000000)" id="Group-2-Copy">
+                                            <g transform="translate(0.000000, 5.000000)" id="Icon">
+                                                <use mask="url(#full-start-mask)" stroke-width="4" id="Rectangle-22" xlink:href="#full-start-path"/>
+                                                <path stroke-width="2" id="Line" d="M5,0 L5,2.99971994" stroke-linecap="square"/>
+                                                <path stroke-width="2" id="Line-Copy" d="M18,0 L18,2.99971994" stroke-linecap="square"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            Start:
+                        </div>
+                        <div class="full-start-end-date" id="sast-full-start-date">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--end-->
+                <div class="full-end">
+                    <div class="full-start-end-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" version="1.1" viewBox="0 0 23 26" width="23px">
+                            <title>
+                                Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <rect height="23" rx="1.6" id="full-start-path" width="23" x="0" y="2"/>
+                                <mask height="23" maskUnits="objectBoundingBox" id="full-start-mask" width="23" maskContentUnits="userSpaceOnUse" fill="white" x="0"
+                                      y="0">
+                                    <use xlink:href="#full-start-path"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-684.000000, -708.000000)" id="Jenkins" stroke="#373050">
+                                    <g transform="translate(273.000000, 695.000000)" id="CxSAST">
+                                        <g transform="translate(411.000000, 9.000000)" id="Group-2-Copy">
+                                            <g transform="translate(0.000000, 5.000000)" id="Icon">
+                                                <use mask="url(#full-start-mask)" stroke-width="4" id="Rectangle-22" xlink:href="#full-start-path"/>
+                                                <path stroke-width="2" id="Line" d="M5,0 L5,2.99971994" stroke-linecap="square"/>
+                                                <path stroke-width="2" id="Line-Copy" d="M18,0 L18,2.99971994" stroke-linecap="square"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            End:
+                        </div>
+                        <div class="full-start-end-date" id="sast-full-end-date">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--sast files-->
+                <div class="full-files">
+                    <div class="full-start-end-icon files-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" version="1.1" viewBox="0 0 21 26" width="21px">
+                            <title>
+                                file</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <path id="files-path"
+                                      d="M15.5147186,0 L1.99456145,0 C0.90234375,0 0,0.89408944 0,1.99700466 L0,24.0029953 C0,25.1050211 0.892995579,26 1.99456145,26 L19.0054385,26 C20.0976562,26 21,25.1059106 21,24.0029953 L21,5.43446766 L20.9745931,5.45987452 L15.5147186,5.55111512e-16 Z"/>
+                                <mask height="26" maskUnits="objectBoundingBox" id="files-mask" width="21" maskContentUnits="userSpaceOnUse" fill="white" x="0" y="0">
+                                    <use xlink:href="#files-path"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-847.000000, -709.000000)" id="Jenkins">
+                                    <g transform="translate(273.000000, 695.000000)" id="CxSAST">
+                                        <g transform="translate(574.000000, 9.000000)" id="Group-3">
+                                            <g transform="translate(0.000000, 5.000000)" id="file">
+                                                <use mask="url(#files-mask)" stroke-width="4" id="Combined-Shape" stroke="#373050" xlink:href="#files-path"/>
+                                                <path id="Combined-Shape" d="M13.8888889,0 L14.7777778,0 L21,7 L21,7.5 L21,8 L13,8 L13,0 L13.8888889,0 Z"
+                                                      fill="#373050"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            Files:
+                        </div>
+                        <div class="full-start-end-date" id="sast-full-files">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--sast loc-->
+                <div class="full-loc">
+                    <div class="full-start-end-icon loc-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="29"
+                             id="SvgjsSvg1018"
+                             version="1.1" viewBox="0 0 29 29" width="29"><title>Icon</title>
+                            <desc>Created with Avocode.</desc>
+                            <defs id="SvgjsDefs1019"/>
+                            <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-1012,-1365)" stroke-width="2" id="SvgjsPath1020" fill-opacity="0"
+                                  stroke-dasharray="0"
+                                  d="M1032 1368L1039.95 1378.76L1032 1389.51 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-1012,-1365)" stroke-width="2" id="SvgjsPath1021" fill-opacity="0"
+                                  stroke-dasharray="0"
+                                  d="M1020.95 1368L1013 1378.76L1020.95 1389.51 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path stroke-miterlimit="50" transform="matrix(1,0,0,1,-1012,-1365)" stroke-width="2" id="SvgjsPath1022" fill-opacity="0"
+                                  stroke-dasharray="0"
+                                  d="M1028.86 1366L1022.9999999999999 1392.54 " stroke-opacity="1" fill="#ffffff" stroke="#373050" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            Code Lines:
+                        </div>
+                        <div class="full-start-end-date" id="sast-full-loc">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sast-cve-table-high-container">
+
+            </div>
+            <div id="sast-cve-table-med-container">
+
+            </div>
+            <div id="sast-cve-table-low-container">
+
+            </div>
+        </td>
+    </tr>
+
+</table>
+<table class="osa-full">
+    <tr class="summary-table-row cxosa-full" id="osa-full">
+        <td class="title-column">
+            <div class="summary-title">
+                <div class="sum1">CxOSA</div>
+                <div class="sum1">Full Report</div>
+            </div>
+            <div class="detailed-report">
+                <div class="sast-downloads osa-downloads">
+                    <div class="report-link"><a class="html-report" id="osa-html-link">
+                        <div class="html-report download-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="16px" version="1.1" viewBox="0 0 13 16"
+                                 width="13px"><title>
+                                Analize</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs/>
+                                <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                    <g transform="translate(-286.000000, -1439.000000)" id="Jenkins">
+                                        <g transform="translate(272.000000, 1290.000000)" id="CxSAST">
+                                            <g transform="translate(14.000000, 148.000000)" id="Group">
+                                                <g transform="translate(1.000000, 2.000000)" id="Analize">
+                                                    <circle cy="5" stroke-width="2" id="Oval-3" r="5" stroke="#373050" cx="5"/>
+                                                    <rect transform="translate(8.866025, 11.696152) rotate(-30.000000) translate(-8.866025, -11.696152) "
+                                                          height="6.53589838"
+                                                          id="Rectangle-9" width="2" fill="#373050" x="7.8660254" y="8.42820323"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="html-report download-txt">
+                            <div class="detailed-report-ttl">Analyzed results</div>
+                        </div>
+                    </a></div>
+                    <div class="report-link"><a class="pdf-report" id="osa-pdf-link">
+                        <div class="pdf-report download-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="16"
+                                 id="SvgjsSvg1022" version="1.1" viewBox="0 0 13 16" width="13"><title>PDF icon</title>
+                                <desc>Created with Avocode.</desc>
+                                <defs id="SvgjsDefs1023">
+                                    <clipPath id="SvgjsClipPath1027">
+                                        <path id="SvgjsPath1026" d="M271 763L280.1 763L284 767L284 779L271 779Z " fill="#ffffff"/>
+                                    </clipPath>
+                                </defs>
+                                <path transform="matrix(1,0,0,1,-271,-763)" id="SvgjsPath1024" fill-opacity="1" d="M279 768L279 763L280.1 763L284 767L284 768Z "
+                                      fill="#373050"/>
+                                <path stroke-dasharray="0" d="M271 763L280.1 763L284 767L284 779L271 779Z " stroke-opacity="1" stroke="#373050" stroke-linecap="butt"
+                                      stroke-linejoin="miter" stroke-miterlimit="50" transform="matrix(1,0,0,1,-271,-763)" stroke-width="2" id="SvgjsPath1025"
+                                      fill-opacity="0"
+                                      fill="#ffffff" clip-path="url(&quot;#SvgjsClipPath1027&quot;)"/>
+                            </svg>
+                        </div>
+                        <div class="pdf-report download-txt">
+                            <div class="pdf-report detailed-report-ttl">Download PDF Report</div>
+                        </div>
+                    </a></div>
+                </div>
+            </div>
+        </td>
+        <td class="main-column">
+            <div class="full-start-end">
+
+                <!--osa start-->
+                <div class="full-start">
+                    <div class="full-start-end-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" version="1.1" viewBox="0 0 23 26" width="23px">
+                            <title>
+                                Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <rect height="23" rx="1.6" id="full-start-path" width="23" x="0" y="2"/>
+                                <mask height="23" maskUnits="objectBoundingBox" id="full-start-mask" width="23" maskContentUnits="userSpaceOnUse" fill="white" x="0"
+                                      y="0">
+                                    <use xlink:href="#full-start-path"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-684.000000, -708.000000)" id="Jenkins" stroke="#373050">
+                                    <g transform="translate(273.000000, 695.000000)" id="CxSAST">
+                                        <g transform="translate(411.000000, 9.000000)" id="Group-2-Copy">
+                                            <g transform="translate(0.000000, 5.000000)" id="Icon">
+                                                <use mask="url(#full-start-mask)" stroke-width="4" id="Rectangle-22" xlink:href="#full-start-path"/>
+                                                <path stroke-width="2" id="Line" d="M5,0 L5,2.99971994" stroke-linecap="square"/>
+                                                <path stroke-width="2" id="Line-Copy" d="M18,0 L18,2.99971994" stroke-linecap="square"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            Start:
+                        </div>
+                        <div class="full-start-end-date" id="osa-full-start-date">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--osa end-->
+                <div class="full-end">
+                    <div class="full-start-end-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" version="1.1" viewBox="0 0 23 26" width="23px">
+                            <title>
+                                Icon</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <rect height="23" rx="1.6" id="full-start-path" width="23" x="0" y="2"/>
+                                <mask height="23" maskUnits="objectBoundingBox" id="full-start-mask" width="23" maskContentUnits="userSpaceOnUse" fill="white" x="0"
+                                      y="0">
+                                    <use xlink:href="#full-start-path"/>
+                                </mask>
+                            </defs>
+                            <g stroke-width="1" fill-rule="evenodd" id="Page-1" stroke="none" fill="none">
+                                <g transform="translate(-684.000000, -708.000000)" id="Jenkins" stroke="#373050">
+                                    <g transform="translate(273.000000, 695.000000)" id="CxSAST">
+                                        <g transform="translate(411.000000, 9.000000)" id="Group-2-Copy">
+                                            <g transform="translate(0.000000, 5.000000)" id="Icon">
+                                                <use mask="url(#full-start-mask)" stroke-width="4" id="Rectangle-22" xlink:href="#full-start-path"/>
+                                                <path stroke-width="2" id="Line" d="M5,0 L5,2.99971994" stroke-linecap="square"/>
+                                                <path stroke-width="2" id="Line-Copy" d="M18,0 L18,2.99971994" stroke-linecap="square"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            End:
+                        </div>
+                        <div class="full-start-end-date" id="osa-full-end-date">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--osa files-->
+                <div class="full-files">
+                    <div class="full-start-end-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" height="27"
+                             id="SvgjsSvg1029"
+                             version="1.1" viewBox="0 0 32 27" width="32"><title>Combined Shape</title>
+                            <desc>Created with Avocode.</desc>
+                            <defs id="SvgjsDefs1030">
+                                <clipPath id="SvgjsClipPath1033">
+                                    <path id="SvgjsPath1032"
+                                          d="M848 2095C848 2094.82964 848.0142 2094.6626 848.04148 2094.5C848.0142 2094.3374 848 2094.17036 848 2094V2091C848 2089.34315 849.34315 2088 851 2088H857C858.65685 2088 860.29137 2089.31116 860.65079 2090.92856L860.8888900000001 2092H877.0000000000001C878.6568500000001 2092 880.0000000000001 2093.34315 880.0000000000001 2095V2112C880.0000000000001 2113.65685 878.6568500000001 2115 877.0000000000001 2115H851.0000000000001C849.3431500000002 2115 848.0000000000001 2113.65685 848.0000000000001 2112Z "
+                                          fill="#ffffff"/>
+                                </clipPath>
+                            </defs>
+                            <path stroke-dasharray="0"
+                                  d="M848 2095C848 2094.82964 848.0142 2094.6626 848.04148 2094.5C848.0142 2094.3374 848 2094.17036 848 2094V2091C848 2089.34315 849.34315 2088 851 2088H857C858.65685 2088 860.29137 2089.31116 860.65079 2090.92856L860.8888900000001 2092H877.0000000000001C878.6568500000001 2092 880.0000000000001 2093.34315 880.0000000000001 2095V2112C880.0000000000001 2113.65685 878.6568500000001 2115 877.0000000000001 2115H851.0000000000001C849.3431500000002 2115 848.0000000000001 2113.65685 848.0000000000001 2112Z "
+                                  stroke-opacity="1" stroke="#373050" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="50"
+                                  transform="matrix(1,0,0,1,-848,-2088)"
+                                  stroke-width="4" id="SvgjsPath1031" fill-opacity="0" fill="#ffffff" clip-path="url(&quot;#SvgjsClipPath1033&quot;)"/>
+                        </svg>
+                    </div>
+                    <div class="full-start-end-text-date">
+                        <div class="full-start-end-text">
+                            Files:
+                        </div>
+                        <div class="full-start-end-date" id="osa-full-files">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="osa-cve-table-high-container">
+
+            </div>
+            <div id="osa-cve-table-med-container">
+
+            </div>
+            <div id="osa-cve-table-low-container">
+
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+
+<script src="summary-section.js"></script>
+
+</html>

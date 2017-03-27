@@ -1,0 +1,138 @@
+.results-report {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.cx-icon {
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 4px;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+.cx-report-title {
+  font-size: 32px;
+  font-weight: 500;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 1em;
+  width: calc(100% - 48px - 2em);
+  border-bottom: solid 2px #373050;
+  color: #373050;
+}
+.summary-section {
+  display: flex;
+  padding: 10px;
+}
+.summary-title {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.sast-summary {
+  margin-right: 47px;
+}
+.chart {
+  display: table;
+  table-layout: fixed;
+  max-width: 385px;
+  min-width: 330px;
+  width: 100%;
+  height: 288px;
+  padding: 0;
+  background-image: linear-gradient(to top, #d5d5d5, #ffffff 2%);
+  background-size: 100% 70px;
+  background-position: left bottom;
+  border-bottom: solid #979797 2px;
+}
+.chart li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
+}
+.chart li span {
+  max-width: 20px;
+}
+.chart span {
+  margin-left: 25%;
+  display: block;
+  background: #d1ecfa;
+  animation: draw 1s ease-in-out;
+}
+.chart .bar-count {
+  /*margin-left: 25%;*/
+  width: 65%;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.47px;
+  line-height: 40px;
+}
+.chart .bar-title {
+  font-size: 16px;
+  padding: 0 18px;
+  color: #525055;
+}
+.chart .bar-title-container {
+  position: absolute;
+  padding-top: 21px;
+  display: inline-flex;
+  text-align: center;
+  word-wrap: break-word;
+}
+.chart .bar-1 {
+  position: relative;
+  background-color: #da2945;
+}
+.chart .bar-2 {
+  position: relative;
+  background-color: #ffb400;
+}
+.chart .bar-3 {
+  position: relative;
+  background-color: #efd412;
+}
+.threshold-exceeded,
+.threshold-compliance {
+  display: flex;
+  padding-top: 17px;
+  padding-bottom: 5px;
+}
+.threshold-exceeded-icon,
+.threshold-compliance-icon {
+  display: inline-flex;
+  margin-right: 3px;
+  line-height: 28px;
+  vertical-align: middle;
+  padding-right: 6px;
+  height: initial;
+  padding-top: 2px;
+}
+.threshold-exceeded-text {
+  color: #da2945;
+}
+.threshold-compliance-text {
+  color: #21bf3f;
+}
+.osa-libraries {
+  text-align: left;
+  margin-top: 18px;
+  background-color: #f2f2f2;
+  width: 107px;
+  padding: 16px;
+}
+.osa-libraries-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.libraries-vulnerable {
+  overflow: hidden;
+  margin-bottom: 34px;
+}
+.osa-results {
+  display: flex;
+}
