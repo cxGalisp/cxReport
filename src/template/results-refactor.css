@@ -186,3 +186,123 @@
   position: absolute;
   display: inline-flex;
 }
+.title-links-column,
+.main-column {
+  padding: 59px 0;
+  line-height: 25px;
+  display: inline-block;
+}
+.title-links-column {
+  margin-right: 10px;
+  vertical-align: top;
+  height: 100%;
+  letter-spacing: -0.8px;
+  width: 20%;
+  color: #373050;
+  max-width: 250px;
+}
+.full-report-title {
+  border-bottom: solid #979797 1px;
+  color: white;
+  background-color: #373050;
+  line-height: 28px;
+  padding: 5px 13px;
+}
+.full-report-title div {
+  font-size: 24px;
+  font-weight: 500;
+}
+.download-icon,
+.download-txt {
+  display: inline-block;
+}
+.download-icon {
+  margin-right: 6px;
+}
+.full-report-links a {
+  line-height: 28px;
+  color: black;
+  text-decoration: none;
+}
+.full-start-end {
+  display: inline-flex;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  color: #525055;
+  padding-top: 6px;
+}
+.full-start-end-icon {
+  margin: 4px 7px 0 0;
+}
+.full-start,
+.full-end,
+.full-files,
+.full-loc {
+  display: inline-flex;
+  line-height: 18px;
+  margin-right: 63px;
+}
+.full-loc {
+  margin: auto;
+  display: inline-block;
+}
+.full-loc > div {
+  display: inline-block;
+}
+.osa-downloads a,
+.sast-downloads a {
+  color: black;
+  text-decoration: none;
+}
+.full-severity-title {
+  display: block;
+  text-align: left;
+  margin-top: 45px;
+  margin-bottom: 18px;
+}
+.full-severity-title .severity-title-name {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.full-severity-title .severity-count {
+  display: inline-block;
+}
+.full-severity-title .severity-icon {
+  display: inline-block;
+}
+table.cve-table {
+  width: 100%;
+}
+table.cve-table th,
+table.cve-table td {
+  border: 1px solid transparent;
+  text-align: left;
+}
+table.cve-table th {
+  border-bottom: 1px solid #373050;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+table.cve-table td {
+  font-weight: 500;
+  font-size: 16px;
+  color: #373050;
+  border-bottom: 1px solid #979797;
+  padding: 11px 0;
+}
+table.cve-table td.sast-cve-table-high,
+table.cve-table td.sast-cve-table-med,
+table.cve-table td.sast-cve-table-low {
+  max-width: 19px;
+}
+table.cve-table.sast-cve-table td:last-child,
+table.cve-table.sast-cve-table th:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+table.cve-table.osa-cve-table td:last-child,
+table.cve-table.osa-cve-table th:last-child {
+  width: 32%;
+}

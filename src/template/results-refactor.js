@@ -45,6 +45,16 @@ var highCount = 200;
 var medCount = 100;
 var lowCount = 1;
 
+//cve lists
+var highCveList = [{"prettyName": "SQL Injection", "name": "SQL_Injection", "severity": "3", "count": 1}];
+var medCveList = [{"prettyName": "Parameter Tampering", "name": "Parameter_Tampering", "severity": "2", "count": 1}];
+var lowCveList = [{
+    "prettyName": "Improper Exception Handling",
+    "name": "Improper_Exception_Handling",
+    "severity": "1",
+    "count": 3
+}, {"prettyName": "Improper Resource Access Authorization", "name": "Improper_Resource_Access_Authorization", "severity": "1", "count": 1}];
+
 //-------------------------- osa vars --------------------------------------
 //Legacy form
 var osaEnabled = true;
@@ -63,6 +73,26 @@ var osaLowThreshold = 5;
 var osaHighCount = 2;
 var osaMedCount = 9;
 var osaLowCount = 10;
+
+//-------------------------- full reports vars --------------------------------------
+var sastPdfPath = 'path/pdf';
+var sastHtmlPath = 'path/pdf';
+//    http://localhost/CxWebClient/ViewerMain.aspx?scanid=1030692&projectid=40565
+var sastCodeViewerPath = 'path/pdf';
+
+var osaHtmlPath = 'path/pdf';
+var osaPdfPath = 'path/pdf';
+
+var sastStartDate = 28 / 06 / 2016;
+var sastEndtDate = 28 / 06 / 2016;
+var sastNumFiles = 1023;
+var sastLoc = 5632;
+
+var osaStartDate = 28 / 06 / 2016;
+var osaEndtDate = 28 / 06 / 2016;
+var osaNumFiles = 28 / 06 / 2016;
+
+
 
 
 document.getElementById("cx-icon-main").setAttribute("src", cxIconPath);
@@ -164,6 +194,42 @@ if (osaEnabled) {
 else {
     document.getElementById("osa-info").setAttribute("style", "display:none");
 }
+
+//---------------------------------------------------------- full reports ---------------------------------------------------------------
+//sast links
+document.getElementById("sast-html-link").setAttribute("href", sastHtmlPath);
+
+//sastPdfPath only if pdfReportReady
+if (pdfReportReady) {
+    document.getElementById("sast-pdf-link").innerHTML =
+
+        '<a class="pdf-report" href="' + sastPdfPath + '">' +
+        '<div class="download-icon">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" id="SvgjsSvg1022" version="1.1" width="13" height="16" viewBox="0 0 13 16"><title>PDF icon</title><desc>Created with Avocode.</desc><defs id="SvgjsDefs1023"><clipPath id="SvgjsClipPath1027"><path id="SvgjsPath1026" d="M271 763L280.1 763L284 767L284 779L271 779Z " fill="#ffffff"/></clipPath></defs><path id="SvgjsPath1024" d="M279 768L279 763L280.1 763L284 767L284 768Z " fill="#373050" fill-opacity="1" transform="matrix(1,0,0,1,-271,-763)"/><path id="SvgjsPath1025" d="M271 763L280.1 763L284 767L284 779L271 779Z " fill-opacity="0" fill="#ffffff" stroke-dasharray="0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#373050" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#SvgjsClipPath1027&quot;)" transform="matrix(1,0,0,1,-271,-763)"/></svg>' +
+        '</div>' +
+        '<div class="download-txt">' +
+        'PDF Report' +
+        '</div>' +
+        '</a>';
+}
+
+document.getElementById("sast-code-viewer-link").setAttribute("href", sastCodeViewerPath);
+/*
+//generate full reports
+if (highCount == 0 && medCount == 0 && lowCount == 0 ) {
+    document.getElementById("sast-full").setAttribute("style", "display: none");
+} else {
+    if (highCount > 0) {
+        generateCveTable(SEVERITY.HIGH);
+    }
+    if (medCount > 0) {
+        generateCveTable(SEVERITY.MED);
+    }
+    if (lowCount > 0) {
+        generateCveTable(SEVERITY.LOW);
+    }
+}*/
+
 //functions
 function tooltipGenerator(severity) {
     var threshold = 0;
@@ -212,8 +278,8 @@ function tooltipGenerator(severity) {
         ' ' +
         '</div>' +
         '<div class="threshold-tooltip">' +
-        '<div class="threshold-text">Threshold</div>' +
-        '<div class="threshold-number">' + threshold + '</div>' +
+        '<div>Threshold</div>' +
+        '<div>' + threshold + '</div>' +
         '</div>' +
         '</div>';
 
