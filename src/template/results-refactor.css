@@ -3,7 +3,6 @@
   font-family: 'Roboto', sans-serif;
 }
 .cx-icon {
-  margin-left: 1em;
   margin-right: 1em;
   padding: 4px;
   width: 48px;
@@ -17,18 +16,19 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 1em;
-  width: calc(100% - 48px - 2em);
+  width: calc(100% - 48px - 1em);
   border-bottom: solid 2px #373050;
   color: #373050;
 }
 .summary-section {
   display: flex;
   padding: 10px;
+  padding-bottom: 26px;
 }
 .summary-title {
   font-size: 24px;
   font-weight: 500;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 .sast-summary {
   margin-right: 47px;
@@ -36,7 +36,7 @@
 .chart {
   display: table;
   table-layout: fixed;
-  max-width: 385px;
+  max-width: 475px;
   min-width: 330px;
   width: 100%;
   height: 288px;
@@ -69,7 +69,7 @@
   text-align: center;
   font-size: 14px;
   letter-spacing: -0.47px;
-  line-height: 40px;
+  line-height: 43px;
 }
 .chart .bar-title {
   font-size: 16px;
@@ -95,11 +95,12 @@
   position: relative;
   background-color: #efd412;
 }
+.threshold-exceeded-compliance {
+  height: 18px;
+}
 .threshold-exceeded,
 .threshold-compliance {
   display: flex;
-  padding-top: 17px;
-  padding-bottom: 5px;
 }
 .threshold-exceeded-icon,
 .threshold-compliance-icon {
@@ -119,20 +120,69 @@
 }
 .osa-libraries {
   text-align: left;
-  margin-top: 18px;
+  margin-right: 35px;
   background-color: #f2f2f2;
   width: 107px;
-  padding: 16px;
+  padding: 30px 16px;
 }
 .osa-libraries-title {
   font-size: 14px;
   font-weight: 600;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
-.libraries-vulnerable {
+.libraries-vulnerable,
+.libraries-ok {
   overflow: hidden;
   margin-bottom: 34px;
+  margin-top: 16px;
+}
+.libraries-vulnerable-number,
+.libraries-ok-number {
+  font-size: 18px;
+  margin: auto;
+}
+.libraries-vulnerable-icon,
+.libraries-ok-icon {
+  font-size: 18px;
+}
+.libraries-vulnerable-text,
+.libraries-ok-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+.libraries-icon-number {
+  display: flex;
+  margin-bottom: 13px;
 }
 .osa-results {
   display: flex;
+}
+.threshold-line {
+  width: 20px;
+  border-bottom: dashed white 1px;
+  padding-right: 3px;
+}
+.threshold-tooltip {
+  transform: translate(0, 50%);
+  line-height: 14px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  padding: 4px 10px;
+  margin-left: 4px;
+  background: #373050;
+  border-radius: 5px;
+}
+.threshold-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: -5px;
+  border: 5px solid transparent;
+  border-right-color: #373050;
+}
+.tooltip-container {
+  position: absolute;
+  display: inline-flex;
 }

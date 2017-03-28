@@ -35,7 +35,7 @@ var thresholdComplianceHtml =
 var pdfReportReady = true;
 
 //thresholds - Legacy form
-var thresholdsEnabled = false;
+var thresholdsEnabled = true;
 var highThreshold = 199;
 var medThreshold = 10;
 var lowThreshold = 3;
@@ -54,7 +54,7 @@ var osaVulnerableAndOutdatedLibs = 456;
 var okLibraries = 0;
 
 //thresholds - Legacy form
-var osaThresholdsEnabled = false;
+var osaThresholdsEnabled = true;
 var osaHighThreshold = 1;
 var osaMedThreshold = 3;
 var osaLowThreshold = 5;
@@ -212,10 +212,8 @@ function tooltipGenerator(severity) {
         ' ' +
         '</div>' +
         '<div class="threshold-tooltip">' +
-        '<div class="threshold-tooltip-background">' +
         '<div class="threshold-text">Threshold</div>' +
         '<div class="threshold-number">' + threshold + '</div>' +
-        '</div>' +
         '</div>' +
         '</div>';
 
