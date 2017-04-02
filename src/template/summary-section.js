@@ -35,20 +35,23 @@ var thresholdComplianceHtml =
 var pdfReportReady = true;
 
 //thresholds - Legacy form
-var thresholdsEnabled = false;
-var highThreshold = 199;
+var thresholdsEnabled = true;
+var highThreshold = 0;
 var medThreshold = 10;
 var lowThreshold = 3;
 
 //counts - Legacy form
-var highCount = 200;
+var highCount = 1;
 var medCount = 100;
 var lowCount = 1;
 
 //cve lists
-var highCveList = [{"prettyName": "SQL Injection", "name": "SQL_Injection", "severity": "3", "count": 1}];
-var medCveList = [{"prettyName": "Parameter Tampering", "name": "Parameter_Tampering", "severity": "2", "count": 1}];
-var lowCveList = [{
+var highCveList = [
+    {"prettyName": "SQL Injection", "name": "SQL_Injection", "severity": "3", "count": 1}];
+var medCveList = [
+    {"prettyName": "Parameter Tampering", "name": "Parameter_Tampering", "severity": "2", "count": 1}];
+var lowCveList = [
+    {
     "prettyName": "Improper Exception Handling",
     "name": "Improper_Exception_Handling",
     "severity": "1",
@@ -427,7 +430,7 @@ else {
 
 //---------------------------------------------------------- full reports ---------------------------------------------------------------
 //sast links
-document.getElementById("sast-html-link").setAttribute("href", sastHtmlPath);
+//document.getElementById("sast-html-link").setAttribute("href", sastHtmlPath);
 
 //sastPdfPath only if pdfReportReady
 if (pdfReportReady) {
