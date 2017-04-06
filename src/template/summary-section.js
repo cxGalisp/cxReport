@@ -45,18 +45,1268 @@ var highCount = 1;
 var medCount = 100;
 var lowCount = 1;
 
-//cve lists
-var highCveList = [
-    {"prettyName": "SQL Injection", "name": "SQL_Injection", "severity": "3", "count": 1}];
-var medCveList = [
-    {"prettyName": "Parameter Tampering", "name": "Parameter_Tampering", "severity": "2", "count": 1}];
-var lowCveList = [
-    {
-    "prettyName": "Improper Exception Handling",
-    "name": "Improper_Exception_Handling",
-    "severity": "1",
-    "count": 3
-}, {"prettyName": "Improper Resource Access Authorization", "name": "Improper_Resource_Access_Authorization", "severity": "1", "count": 1}];
+var sastDetailedReport = {
+    "CxXMLResults": {
+        "Owner": "admin@cx",
+        "Query": [
+            {
+                "cweId": 99,
+                "QueryVersionCode": 56089346,
+                "Severity": "High",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 6,
+                        "SimilarityId": -125320244,
+                        "PathNode": [{
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 37,
+                            "Length": 6,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 8, "Code": "public static void main(String dbName) throws SQLException {"}},
+                            "Name": "dbName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 54,
+                            "Length": 6,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 9, "Code": "DriverManager.getConnection(\"jdbc:\" + dbms + \":\" + dbName + \";create=true\");"}},
+                            "Name": "dbName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 30,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 9, "Code": "DriverManager.getConnection(\"jdbc:\" + dbms + \":\" + dbName + \";create=true\");"}},
+                            "Name": "getConnection"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                    "Severity": "High",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=6",
+                    "Remark": "",
+                    "Line": 8,
+                    "Column": 37,
+                    "FalsePositive": false,
+                    "NodeId": 10307420006,
+                    "SeverityIndex": 3,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java High Risk\\Connection String Injection Version:1",
+                "Language": "Java",
+                "name": "Connection_String_Injection",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 3,
+                "id": 589,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection",
+                "group": "Java_High_Risk"
+            },
+            {
+                "cweId": 99,
+                "QueryVersionCode": 56121122,
+                "Severity": "High",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 7,
+                        "SimilarityId": 1076204687,
+                        "PathNode": [{
+                            "Line": 6,
+                            "Type": "",
+                            "Column": 36,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 6, "Code": "public static void main(String [] args) throws IOException {"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 7,
+                            "Type": "",
+                            "Column": 31,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 7, "Code": "int port = Integer.parseInt(args[1]);"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 7,
+                            "Type": "",
+                            "Column": 30,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 7, "Code": "int port = Integer.parseInt(args[1]);"}},
+                            "Name": "parseInt"
+                        }, {
+                            "Line": 7,
+                            "Type": "",
+                            "Column": 7,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 7, "Code": "int port = Integer.parseInt(args[1]);"}},
+                            "Name": "port"
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 48,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 5,
+                            "Snippet": {"Line": {"Number": 8, "Code": "ServerSocket serverSocket = new ServerSocket(port);"}},
+                            "Name": "port"
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 31,
+                            "Length": 3,
+                            "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                            "NodeId": 6,
+                            "Snippet": {"Line": {"Number": 8, "Code": "ServerSocket serverSocket = new ServerSocket(port);"}},
+                            "Name": "ServerSocket"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/ResourceInjection.java",
+                    "Severity": "High",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=7",
+                    "Remark": "",
+                    "Line": 6,
+                    "Column": 36,
+                    "FalsePositive": false,
+                    "NodeId": 10307420007,
+                    "SeverityIndex": 3,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java High Risk\\Resource Injection Version:1",
+                "Language": "Java",
+                "name": "Resource_Injection",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 3,
+                "id": 592,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection",
+                "group": "Java_High_Risk"
+            },
+            {
+                "cweId": 89,
+                "QueryVersionCode": 56142311,
+                "Severity": "High",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 8,
+                        "SimilarityId": 568456520,
+                        "PathNode": [{
+                            "Line": 11,
+                            "Type": "",
+                            "Column": 40,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 11, "Code": "public static void main (String [] args)"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 74,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 5,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 56,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 6,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 55,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 7,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "executeQuery"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "High",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=8",
+                    "Remark": "",
+                    "Line": 11,
+                    "Column": 40,
+                    "FalsePositive": false,
+                    "NodeId": 10307420008,
+                    "SeverityIndex": 3,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java High Risk\\SQL Injection Version:1",
+                "Language": "Java",
+                "name": "SQL_Injection",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 3,
+                "id": 594,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection",
+                "group": "Java_High_Risk"
+            },
+            {
+                "cweId": 79,
+                "QueryVersionCode": 56152907,
+                "Severity": "High",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 9,
+                        "SimilarityId": -1497161265,
+                        "PathNode": [{
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "readLine"
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 36,
+                            "Length": 2,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "!="
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 14,
+                            "Length": 3,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 13, "Code": "out.print(str);"}},
+                            "Name": "str"
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 13,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 13, "Code": "out.print(str);"}},
+                            "Name": "print"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                    "Severity": "High",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=9",
+                    "Remark": "",
+                    "Line": 12,
+                    "Column": 32,
+                    "FalsePositive": false,
+                    "NodeId": 10307420009,
+                    "SeverityIndex": 3,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java High Risk\\Stored XSS Version:1",
+                "Language": "Java",
+                "name": "Stored_XSS",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 3,
+                "id": 595,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.7 - Cross-site scripting (XSS),OWASP Top 10 2013;A3-Cross-Site Scripting (XSS)",
+                "group": "Java_High_Risk"
+            },
+            {
+                "cweId": 643,
+                "QueryVersionCode": 597,
+                "Severity": "High",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 10,
+                        "SimilarityId": -1340289189,
+                        "PathNode": [{
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 42,
+                            "Length": 10,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 12, "Code": "String password = request.getParameter(\"Password\");"}},
+                            "Name": "\"\"Password\"\""
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 41,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 12, "Code": "String password = request.getParameter(\"Password\");"}},
+                            "Name": "getParameter"
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 10,
+                            "Length": 8,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 12, "Code": "String password = request.getParameter(\"Password\");"}},
+                            "Name": "password"
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 95,
+                            "Length": 8,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 4,
+                            "Snippet": {
+                                "Line": {
+                                    "Number": 13,
+                                    "Code": "String expression = \"/employees/employee[loginID/text()=' username ' and passwd/text()='\" + password + \"']\";"
+                                }
+                            },
+                            "Name": "password"
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 10,
+                            "Length": 10,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 5,
+                            "Snippet": {
+                                "Line": {
+                                    "Number": 13,
+                                    "Code": "String expression = \"/employees/employee[loginID/text()=' username ' and passwd/text()='\" + password + \"']\";"
+                                }
+                            },
+                            "Name": "expression"
+                        }, {
+                            "Line": 15,
+                            "Type": "",
+                            "Column": 18,
+                            "Length": 10,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 6,
+                            "Snippet": {"Line": {"Number": 15, "Code": "xPath.evaluate(expression, inputSource, XPathConstants.NODESET);"}},
+                            "Name": "expression"
+                        }, {
+                            "Line": 15,
+                            "Type": "",
+                            "Column": 17,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 7,
+                            "Snippet": {"Line": {"Number": 15, "Code": "xPath.evaluate(expression, inputSource, XPathConstants.NODESET);"}},
+                            "Name": "evaluate"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                    "Severity": "High",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=10",
+                    "Remark": "",
+                    "Line": 12,
+                    "Column": 42,
+                    "FalsePositive": false,
+                    "NodeId": 10307420010,
+                    "SeverityIndex": 3,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java High Risk\\XPath Injection Version:0",
+                "Language": "Java",
+                "name": "XPath_Injection",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 3,
+                "id": 597,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection",
+                "group": "Java_High_Risk"
+            },
+            {
+                "cweId": 36,
+                "QueryVersionCode": 68133630,
+                "Severity": "Medium",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 1,
+                        "SimilarityId": 278232054,
+                        "PathNode": [{
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 42,
+                            "Length": 10,
+                            "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 8, "Code": "String fileName = request.getParameter(\"FileName\");"}},
+                            "Name": "\"\"FileName\"\""
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 41,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 8, "Code": "String fileName = request.getParameter(\"FileName\");"}},
+                            "Name": "getParameter"
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 10,
+                            "Length": 8,
+                            "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 8, "Code": "String fileName = request.getParameter(\"FileName\");"}},
+                            "Name": "fileName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 34,
+                            "Length": 8,
+                            "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 9, "Code": "FileReader fr = new FileReader(fileName);"}},
+                            "Name": "fileName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 19,
+                            "Length": 3,
+                            "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                            "NodeId": 5,
+                            "Snippet": {"Line": {"Number": 9, "Code": "FileReader fr = new FileReader(fileName);"}},
+                            "Name": "FileReader"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/AbsolutePathTraversal.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=1",
+                    "Remark": "",
+                    "Line": 8,
+                    "Column": 42,
+                    "FalsePositive": false,
+                    "NodeId": 10307420001,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\Absolute Path Traversal Version:2",
+                "Language": "Java",
+                "name": "Absolute_Path_Traversal",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 2,
+                "id": 1670,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.8 - Improper access control,OWASP Top 10 2013;A4-Insecure Direct Object References",
+                "group": "Java_Medium_Threat"
+            },
+            {
+                "cweId": 244,
+                "QueryVersionCode": 94892204,
+                "Severity": "Medium",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 2,
+                        "SimilarityId": 1193144702,
+                        "PathNode": {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 10,
+                            "Length": 8,
+                            "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 12, "Code": "String password = request.getParameter(\"Password\");"}},
+                            "Name": "password"
+                        },
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/XPathInjection.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=2",
+                    "Remark": "",
+                    "Line": 12,
+                    "Column": 10,
+                    "FalsePositive": false,
+                    "NodeId": 10307420002,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\Heap Inspection Version:4",
+                "Language": "Java",
+                "name": "Heap_Inspection",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 2,
+                "id": 3771,
+                "categories": "OWASP Top 10 2013;A6-Sensitive Data Exposure",
+                "group": "Java_Medium_Threat"
+            },
+            {
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\SSRF Version:1",
+                "Language": "Java",
+                "cweId": 918,
+                "name": "SSRF",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "QueryVersionCode": 104028677,
+                "Severity": "Medium",
+                "SeverityIndex": 2,
+                "id": 4422,
+                "group": "Java_Medium_Threat",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 5,
+                        "SimilarityId": -1967402895,
+                        "PathNode": [{
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 37,
+                            "Length": 6,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 8, "Code": "public static void main(String dbName) throws SQLException {"}},
+                            "Name": "dbName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 54,
+                            "Length": 6,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 9, "Code": "DriverManager.getConnection(\"jdbc:\" + dbms + \":\" + dbName + \";create=true\");"}},
+                            "Name": "dbName"
+                        }, {
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 61,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 9, "Code": "DriverManager.getConnection(\"jdbc:\" + dbms + \":\" + dbName + \";create=true\");"}},
+                            "Name": "BinaryExpr"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/ConnectionStringInjection.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=5",
+                    "Remark": "",
+                    "Line": 8,
+                    "Column": 37,
+                    "FalsePositive": false,
+                    "NodeId": 10307420005,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                }
+            },
+            {
+                "cweId": 79,
+                "QueryVersionCode": 56471252,
+                "Severity": "Medium",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 16,
+                        "SimilarityId": 1827645841,
+                        "PathNode": [{
+                            "Line": 4,
+                            "Type": "",
+                            "Column": 38,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 4, "Code": "public static void main(String[] args) {"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 8, "Code": "System.out.println(args[0]);"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 8,
+                            "Type": "",
+                            "Column": 31,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 8, "Code": "System.out.println(args[0]);"}},
+                            "Name": "println"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=16",
+                    "Remark": "",
+                    "Line": 4,
+                    "Column": 38,
+                    "FalsePositive": false,
+                    "NodeId": 10307420016,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\CGI Reflected XSS All Clients Version:1",
+                "Language": "Java",
+                "name": "CGI_Reflected_XSS_All_Clients",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 2,
+                "id": 625,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.7 - Cross-site scripting (XSS),OWASP Top 10 2013;A3-Cross-Site Scripting (XSS)",
+                "group": "Java_Medium_Threat"
+            },
+            {
+                "cweId": 79,
+                "QueryVersionCode": 56492508,
+                "Severity": "Medium",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 17,
+                        "SimilarityId": -1497160520,
+                        "PathNode": [{
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "readLine"
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 36,
+                            "Length": 2,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "!="
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 14,
+                            "Length": 3,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 13, "Code": "out.print(str);"}},
+                            "Name": "str"
+                        }, {
+                            "Line": 13,
+                            "Type": "",
+                            "Column": 13,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 13, "Code": "out.print(str);"}},
+                            "Name": "print"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=17",
+                    "Remark": "",
+                    "Line": 12,
+                    "Column": 32,
+                    "FalsePositive": false,
+                    "NodeId": 10307420017,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\CGI Stored XSS Version:2",
+                "Language": "Java",
+                "name": "CGI_Stored_XSS",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 2,
+                "id": 626,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.7 - Cross-site scripting (XSS),OWASP Top 10 2013;A3-Cross-Site Scripting (XSS)",
+                "group": "Java_Medium_Threat"
+            },
+            {
+                "cweId": 472,
+                "QueryVersionCode": 56609481,
+                "Severity": "Medium",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 18,
+                        "SimilarityId": 568457299,
+                        "PathNode": [{
+                            "Line": 11,
+                            "Type": "",
+                            "Column": 40,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 11, "Code": "public static void main (String [] args)"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 74,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 5,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 56,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 6,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 55,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 7,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "executeQuery"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "Medium",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=18",
+                    "Remark": "",
+                    "Line": 11,
+                    "Column": 40,
+                    "FalsePositive": false,
+                    "NodeId": 10307420018,
+                    "SeverityIndex": 2,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Medium Threat\\Parameter Tampering Version:1",
+                "Language": "Java",
+                "name": "Parameter_Tampering",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 2,
+                "id": 638,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A4-Insecure Direct Object References",
+                "group": "Java_Medium_Threat"
+            },
+            {
+                "cweId": 209,
+                "QueryVersionCode": 56439377,
+                "Severity": "Low",
+                "Result": [{
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 13,
+                        "SimilarityId": 2146205197,
+                        "PathNode": [{
+                            "Line": 9,
+                            "Type": "",
+                            "Column": 27,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 9, "Code": "} catch(Exception e) {"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 10,
+                            "Type": "",
+                            "Column": 13,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 10, "Code": "e.printStackTrace();"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 10,
+                            "Type": "",
+                            "Column": 30,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 10, "Code": "e.printStackTrace();"}},
+                            "Name": "printStackTrace"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/CodeInjection.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=13",
+                    "Remark": "",
+                    "Line": 9,
+                    "Column": 27,
+                    "FalsePositive": false,
+                    "NodeId": 10307420013,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }, {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 14,
+                        "SimilarityId": -2073818864,
+                        "PathNode": [{
+                            "Line": 236,
+                            "Type": "",
+                            "Column": 31,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 236, "Code": "} catch (SQLException e) {"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 237,
+                            "Type": "",
+                            "Column": 13,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 237, "Code": "e.printStackTrace();"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 237,
+                            "Type": "",
+                            "Column": 30,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 237, "Code": "e.printStackTrace();"}},
+                            "Name": "printStackTrace"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=14",
+                    "Remark": "",
+                    "Line": 236,
+                    "Column": 31,
+                    "FalsePositive": false,
+                    "NodeId": 10307420014,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }, {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 15,
+                        "SimilarityId": -2073818864,
+                        "PathNode": [{
+                            "Line": 241,
+                            "Type": "",
+                            "Column": 31,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 241, "Code": "} catch (SQLException e) {"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 242,
+                            "Type": "",
+                            "Column": 13,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 242, "Code": "e.printStackTrace();"}},
+                            "Name": "e"
+                        }, {
+                            "Line": 242,
+                            "Type": "",
+                            "Column": 30,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 242, "Code": "e.printStackTrace();"}},
+                            "Name": "printStackTrace"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=15",
+                    "Remark": "",
+                    "Line": 241,
+                    "Column": 31,
+                    "FalsePositive": false,
+                    "NodeId": 10307420015,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }],
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Low Visibility\\Information Exposure Through an Error Message Version:1",
+                "Language": "Java",
+                "name": "Information_Exposure_Through_an_Error_Message",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 1,
+                "id": 622,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.5 - Improper error handling,OWASP Top 10 2013;A5-Security Misconfiguration",
+                "group": "Java_Low_Visibility"
+            },
+            {
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Low Visibility\\Improper Resource Access Authorization Version:3",
+                "Language": "Java",
+                "cweId": 285,
+                "name": "Improper_Resource_Access_Authorization",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "QueryVersionCode": 96524674,
+                "Severity": "Low",
+                "SeverityIndex": 1,
+                "id": 3890,
+                "group": "Java_Low_Visibility",
+                "Result": [{
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 3,
+                        "SimilarityId": -1949984536,
+                        "PathNode": {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 55,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "executeQuery"
+                        },
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=3",
+                    "Remark": "",
+                    "Line": 240,
+                    "Column": 55,
+                    "FalsePositive": false,
+                    "NodeId": 10307420003,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }, {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 4,
+                        "SimilarityId": 251315612,
+                        "PathNode": {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "readLine"
+                        },
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=4",
+                    "Remark": "",
+                    "Line": 12,
+                    "Column": 32,
+                    "FalsePositive": false,
+                    "NodeId": 10307420004,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }]
+            },
+            {
+                "cweId": 89,
+                "QueryVersionCode": 56184701,
+                "Severity": "Low",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 11,
+                        "SimilarityId": 568456524,
+                        "PathNode": [{
+                            "Line": 11,
+                            "Type": "",
+                            "Column": 40,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 11, "Code": "public static void main (String [] args)"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 4,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "args"
+                        }, {
+                            "Line": 230,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 230, "Code": "String accountNumber = args[1];"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 74,
+                            "Length": 13,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 4,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "accountNumber"
+                        }, {
+                            "Line": 231,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 5,
+                            "Snippet": {"Line": {"Number": 231, "Code": "String query = \"SELECT * FROM user_data WHERE acountNumber = \" + accountNumber;"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 56,
+                            "Length": 5,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 6,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "query"
+                        }, {
+                            "Line": 240,
+                            "Type": "",
+                            "Column": 55,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                            "NodeId": 7,
+                            "Snippet": {"Line": {"Number": 240, "Code": "ResultSet results = statement.executeQuery(query);"}},
+                            "Name": "executeQuery"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/SqlInjection.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=11",
+                    "Remark": "",
+                    "Line": 11,
+                    "Column": 40,
+                    "FalsePositive": false,
+                    "NodeId": 10307420011,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                },
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Low Visibility\\Blind SQL Injections Version:1",
+                "Language": "Java",
+                "name": "Blind_SQL_Injections",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "SeverityIndex": 1,
+                "id": 598,
+                "categories": "PCI DSS v3.1;PCI DSS (3.1) - 6.5.1 - Injection flaws - particularly SQL injection,OWASP Top 10 2013;A1-Injection",
+                "group": "Java_Low_Visibility"
+            },
+            {
+                "LanguageHash": 5833026011574115,
+                "QueryPath": "Java\\Cx\\Java Low Visibility\\Improper Resource Shutdown or Release Version:1",
+                "Language": "Java",
+                "cweId": 404,
+                "name": "Improper_Resource_Shutdown_or_Release",
+                "LanguageChangeDate": "2017-03-06T00:00:00.0000000",
+                "QueryVersionCode": 56205902,
+                "Severity": "Low",
+                "SeverityIndex": 1,
+                "id": 600,
+                "group": "Java_Low_Visibility",
+                "Result": {
+                    "Status": "Recurrent",
+                    "Path": {
+                        "PathId": 12,
+                        "SimilarityId": 328993210,
+                        "PathNode": [{
+                            "Line": 10,
+                            "Type": "",
+                            "Column": 18,
+                            "Length": 7,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 1,
+                            "Snippet": {"Line": {"Number": 10, "Code": "BufferedReader bufread = new BufferedReader(fileread);"}},
+                            "Name": "bufread"
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 16,
+                            "Length": 7,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 2,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "bufread"
+                        }, {
+                            "Line": 12,
+                            "Type": "",
+                            "Column": 32,
+                            "Length": 1,
+                            "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                            "NodeId": 3,
+                            "Snippet": {"Line": {"Number": 12, "Code": "while((str = bufread.readLine()) != null) {"}},
+                            "Name": "readLine"
+                        }],
+                        "ResultId": 1030742
+                    },
+                    "FileName": "/codeInjection/src/main/java/StoredXSS.java",
+                    "Severity": "Low",
+                    "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570&pathid=12",
+                    "Remark": "",
+                    "Line": 10,
+                    "Column": 18,
+                    "FalsePositive": false,
+                    "NodeId": 10307420012,
+                    "SeverityIndex": 1,
+                    "state": 0,
+                    "AssignToUser": ""
+                }
+            }
+        ],
+        "ProjectName": "ggg - sasa - Default Job",
+        "Preset": "Checkmarx Default",
+        "ScanComments": "",
+        "InitiatorName": "admin admin",
+        "ProjectId": 40570,
+        "ReportCreationTime": "Wednesday, April 05, 2017 3:25:21 PM",
+        "DeepLink": "http://CONTRACTOR04-PC/CxWebClient/ViewerMain.aspx?scanid=1030742&projectid=40570",
+        "ScanTime": "00h:00m:30s",
+        "ScanType": "Full",
+        "CheckmarxVersion": "8.4.2",
+        "TeamFullPathOnReportDate": "CxServer",
+        "ScanStart": "Wednesday, April 05, 2017 3:24:31 PM",
+        "Team": "CxServer",
+        "Visibility": "Public",
+        "ScanId": 1030742,
+        "LinesOfCodeScanned": 327,
+        "FilesScanned": 8,
+        "SourceOrigin": "LocalPath"
+    }
+};
+var queryList = sastDetailedReport.CxXMLResults.Query;
+
+
+//query lists
+function generateQueryList(severity) {
+    var severityQueryList = [];
+    var query = {};
+
+    for (var i = 0; i < queryList.length; i++) {
+        if(queryList[i].Severity.toLowerCase() == severity.name) {
+            query = {
+                name: queryList[i].name,
+                count: counter++
+            };
+            severityQueryList.push(query);
+        }
+    }
+
+    return severityQueryList;
+}
+var highCveList = generateQueryList(SEVERITY.HIGH);
+var medCveList = generateQueryList(SEVERITY.MED);
+var lowCveList = generateQueryList(SEVERITY.LOW);
+
 
 //-------------------------- osa vars --------------------------------------
 //Legacy form
@@ -326,8 +1576,6 @@ var osaEndtDate = 28 / 06 / 2016;
 var osaNumFiles = 28 / 06 / 2016;
 
 
-
-
 document.getElementById("cx-icon-main").setAttribute("src", cxIconPath);
 //---------------------------------------------------------- sast ---------------------------------------------------------------
 //todo - catch exceptions?
@@ -464,22 +1712,22 @@ document.getElementById("osa-full-end-date").innerHTML = osaEndtDate;
 document.getElementById("osa-full-files").innerHTML = numberWithCommas(osaNumFiles);
 
 
- //generate full reports
-if (highCount == 0 && medCount == 0 && lowCount == 0 ) {
- document.getElementById("sast-full").setAttribute("style", "display: none");
- } else {
- if (highCount > 0) {
- generateCveTable(SEVERITY.HIGH);
- }
- if (medCount > 0) {
- generateCveTable(SEVERITY.MED);
- }
- if (lowCount > 0) {
- generateCveTable(SEVERITY.LOW);
- }
+//generate full reports
+if (highCount == 0 && medCount == 0 && lowCount == 0) {
+    document.getElementById("sast-full").setAttribute("style", "display: none");
+} else {
+    if (highCount > 0) {
+        generateCveTable(SEVERITY.HIGH);
+    }
+    if (medCount > 0) {
+        generateCveTable(SEVERITY.MED);
+    }
+    if (lowCount > 0) {
+        generateCveTable(SEVERITY.LOW);
+    }
 }
 
-if (osaHighCount == 0 && osaMedCount == 0 && osaLowCount == 0 ) {
+if (osaHighCount == 0 && osaMedCount == 0 && osaLowCount == 0) {
     document.getElementById("osa-full").setAttribute("style", "display: none");
 } else {
     if (osaHighCount > 0) {
